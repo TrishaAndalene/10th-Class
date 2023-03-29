@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Click Handler</title>
+</head>
+<body>
+	<h2><b>Gue mau ngomong</b></h2>
+	<img src="https://i.pinimg.com/originals/5a/74/dc/5a74dc1edc469d9a6d985338f1cdd230.jpg" style="width:150px;height:150px;">
+	<h2><b>Mau gak jadi pacar gue?</b></h2>
+	<button id="yes" onclick="Yes()">YA</button> <br>
+	<button id="no" onclick="moveNo()">TIDAK</button>
+
+
+	<!-- JQuery Lib -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<!-- end JQuery -->
+	
+
+	<script type="text/javascript">
+
+		let status = 0;
+
+		let moveNo = () => {
+			if (status === 0){
+				$('#no').offset({left: 400, top : 50});
+				status++;
+			} else if (status === 1){
+				$('#no').offset({left: 300, top : 500});
+				status++;
+			} else {
+				$('#no').offset({left: 50, top : 312});
+				status = 0;
+			}
+		}
+
+		let Yes = () => {
+			alert(`Beneran nih><`);
+			alert(`makasih`);
+			alert(`i love u><`);
+		}
+		
+		// button location
+		$('#yes').offset({left: 60});
+		$('#no').offset({left: 50, top: 312})
+	
+	</script>
+</body>
+</html>
