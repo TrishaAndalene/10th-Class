@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Word Generator</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var RandomString;
+		var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+		for (var limit = 0; limit < 8; limit++){
+			var letter = alphabet[Math.floor(Math.random()*alphabet.length)];
+			if (RandomString){
+				var late = RandomString;
+				var RandomString = late + letter;
+			} else {
+				var RandomString = letter;
+			};
+		};
+		console.log(RandomString);
+	</script>
+</body>
+</html>
+
+<!-- 
+	var abjad = "abcdefghijklmnopqrstuvwxyz"
+	var randomString = "";
+
+	var char;
+	for (var i=0; i < 8; i++){
+		char = abjad[Math.floor(Math.random()*abjad.length)];
+		randomString += char;
+	}

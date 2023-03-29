@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Function JavaScripts</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// medal picker
+		function medal_picker(score) {
+			medal = ""
+			if (score < 3) {
+				medal = "bronze"
+			} else if (score < 7){
+				medal = "silver"
+			} else {
+				medal = "gold"
+			};
+
+			console.log("Your score : " + score)
+			console.log("Congrats, you got a " + medal + " medal !")
+		}
+
+		medal_picker(2)
+		medal_picker(6)
+		medal_picker(20)
+
+		// get medal [regular]
+		function getMedal(pts) {
+			if (pts < 3){
+				return "bronze"
+			} else if (pts < 7){
+				return "silver"
+			};
+			return "gold"
+		}
+
+		console.log(getMedal(4))
+
+	</script>
+</body>
+</html>
